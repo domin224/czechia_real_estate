@@ -39,7 +39,7 @@ This section explains how to reproduce the full workflow, from data acquisition 
 - **Collect demographic and geographic data:**
   - Download official datasets manually from:
     - [Czech Statistical Office (ČSÚ)](https://www.czso.cz) – e.g., average wages, population by district.
-    - [Czech Office for Surveying, Mapping and Cadastre (ČÚZK)]((https://vdp.cuzk.cz/vdp/ruian/vymennyformat;jsessionid=dm0I_ja6bkGDNPTp87zAFJ7dUhehpb9MKcMkjvosBwfBqrVCGvXa!-369148306)) – e.g., region, district and municipality boundaries.
+    - [Czech Office for Surveying, Mapping and Cadastre (ČÚZK)](https://vdp.cuzk.cz/vdp/ruian/vymennyformat;jsessionid=dm0I_ja6bkGDNPTp87zAFJ7dUhehpb9MKcMkjvosBwfBqrVCGvXa!-369148306)) – e.g., region, district and municipality boundaries.
 
 ### 2. Data Cleaning & Transformation
 
