@@ -139,7 +139,7 @@ group by
 
 -- Inserting missing historic data for Prague with manually assigned codes
 insert into clean_historic_prices (category_main, year, avg_price, district_code, region_code)
-select category_main, year, avg_price, 'CZ010', 'CZ0100'
+select category_main, year, avg_price, 'CZ0100', 'CZ010'
 from historic_real_estate
 where region = 'Hlavní město Praha';
 
