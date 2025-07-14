@@ -34,49 +34,41 @@ This section explains how to reproduce the full workflow, from data acquisition 
 
 - **Scrape real estate listings:**
   - Run the provided Python script to collect current real estate data from [Sreality.cz](https://www.sreality.cz).
-  - Example:
-    ```bash
-    python scripts/scrape_sreality.py
-    ```
-  - The output will be saved as a `.csv` file in the `data/` folder.
+  - The output will be saved as a `.csv` file.
 
 - **Collect demographic and geographic data:**
   - Download official datasets manually from:
     - [Czech Statistical Office (ČSÚ)](https://www.czso.cz) – e.g., average wages, population by district.
     - [Czech Office for Surveying, Mapping and Cadastre (ČÚZK)](https://www.cuzk.cz) – e.g., district boundaries and land registry data.
-  - Save the files into the `data/` folder and make sure filenames match the ones referenced in the SQL scripts or notebooks.
 
 ### 2. Data Cleaning & Transformation
 
 - **Import data into PostgreSQL:**
   - Create a new PostgreSQL database (e.g., `cz_real_estate`) using DBeaver or another client.
   - Import raw CSV files into staging tables.
-  - Use the provided SQL scripts from the `sql/` folder to:
-    - Remove duplicates
-    - Normalize formats (e.g., prices, region names)
-    - Join datasets by region or district
-    - Calculate derived metrics (e.g., price per m²)
+  - Use the provided SQL scripts. Not all scripts that had been used to alter the tables are provided.
 
-- **Optional processing in Excel / Power Query:**
-  - Some files can be further cleaned using Excel or Power Query before import or after SQL processing.
-  - Useful for pivoting, shaping, or quick fixes (e.g., inconsistent column names).
+- **Processing in Excel / Power Query:**
+  - Files can be further cleaned using Excel or Power Query before import or after SQL processing.
+  - Useful for unpivoting, shaping, or quick fixes (e.g., inconsistent column names).
 
 ### 3. Data Visualization
 
 - **Power BI:**
-  - Open the provided `.pbix` file (`dashboards/powerbi_dashboard.pbix`) in Power BI Desktop.
-  - Refresh the data source to point to your local CSV files or PostgreSQL database.
-  - Explore or modify the existing dashboard pages.
+  - Connect your PostgreSQL database to the Power BI model.
+  - Link the tables using relationships based on shared columns.
+  - All tables and the complete model are included in the `powerbi_dashboard.pbix` file.
 
 - **Tableau Public:**
   - Open the Tableau workbook and connect it to your processed data.
-  - Alternatively, explore the hosted version:
-    [Interactive Tableau Dashboard](https://public.tableau.com/views/Czechia_dashboard/Dashboard1)
+  - Unfortunately, the free version of Tableau Public Desktop (which I used) does not support direct connections to PostgreSQL databases.
+  - Upload the CSV files and link them in the **Data** panel.
+  - All tables and the complete model are included in the `tableau_dashboard.twb` file.
 
 - **Export options:**
   - Export dashboard pages as static PDF reports.
-  - Share `.pbix` or Tableau workbooks.
-
+  - Share `.pbix` or Tableau workbook files.
+ 
 ### 4. Project Outputs
 
 - Final CSV data tables are provided in [`csv_tables.zip`](csv_tables.zip)
