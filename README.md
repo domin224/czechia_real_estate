@@ -4,7 +4,8 @@ A data analysis project focused on the Czech real estate market. This repository
 
 ## Project Overview
 
-- **Data Scraping:** Automated collection of real estate data from publicly available sources: Sreality.cz, ČSÚ, ČÚZK
+- **Data Scraping:** Automated collection of real estate data from publicly available sources, mainly Sreality.cz
+- **Data Collection:** Manually gathered publicly accessible data from the Czech Statistical Office (ČSÚ) and the Czech Office for Surveying, Mapping and Cadastre (ČÚZK). The dataset primarily includes information on population size, average wages, and geographical, such as district names and their spatial boundaries.
 - **Data Cleaning & Transformation:** The collected data is cleaned and pre-processed using SQL (e.g., removing duplicates, data formatting, etc.), Microsoft Excel, and/or Power Query (during import into Excel or Power BI).
 - **Data Storage:** Data is saved to a suitable database and prepared for further analysis.
 - **Visualization:** The processed data is visualized in Power BI or Tableau, with final outputs available as interactive dashboards or static reports.
