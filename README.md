@@ -4,7 +4,7 @@ A data analysis project focused on the Czech real estate market. This repository
 
 ## Project Overview
 
-- **Data Scraping:** Automated collection of real estate data from publicly available sources.
+- **Data Scraping:** Automated collection of real estate data from publicly available sources: Sreality.cz, ČSÚ, ČÚZK
 - **Data Cleaning & Transformation:** The collected data is cleaned and pre-processed using SQL (e.g., removing duplicates, data formatting, etc.), Microsoft Excel, and/or Power Query (during import into Excel or Power BI).
 - **Data Storage:** Data is saved to a suitable database and prepared for further analysis.
 - **Visualization:** The processed data is visualized in Power BI or Tableau, with final outputs available as interactive dashboards or static reports.
@@ -36,16 +36,15 @@ A data analysis project focused on the Czech real estate market. This repository
 3. **Visualization:**  
    Load the processed data into Power BI or Tableau and use the prepared visualizations, or create your own dashboards. Alternatively, export the results as PDF reports or share .pbix files.
 
-## Disclaimer
-
-This dashboard presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
-
 ## Example Outputs
 
 - [Interactive Tableau Dashboard](https://public.tableau.com/views/Czechia_dashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - [Power BI dashboard (.pbix)](powerbi_dashboard.pbix)
 - [Static PDF report](powerbi_dashboard.pdf)
 - [Final CSV data tables (ZIP)](csv_tables.zip)
+
+> **Disclaimer:**  
+>This projects presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
 
 ## Author
 
