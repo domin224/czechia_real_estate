@@ -37,6 +37,27 @@ A data analysis project focused on the Czech real estate market. This repository
 3. **Visualization:**  
    Load the processed data into Power BI or Tableau and use the prepared visualizations, or create your own dashboards. Alternatively, export the results as PDF reports or share .pbix files.
 
+## Requirements
+
+To fully use and replicate this project, the following software and tools are recommended:
+
+- **[Python 3.10+](https://www.python.org/downloads/)**  
+  For running the web scraping and data processing scripts.
+
+- **[PostgreSQL](https://www.postgresql.org/)** (e.g., version 15+)  
+  A relational database system used to store and transform the collected data.
+
+- **[DBeaver](https://dbeaver.io/)** (Community Edition is sufficient)  
+  A user-friendly database management tool for interacting with the PostgreSQL database and running SQL scripts.
+
+- **[Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/)** or **[Tableau Public](https://public.tableau.com/)**  
+  Used for creating visualizations and dashboards from the processed data.
+
+- **Python packages** (see `requirements.txt`):  
+  Includes libraries like `requests`, `pandas`, `beautifulsoup4`, and others.
+
+> Tip: DBeaver is especially useful for managing your PostgreSQL database and executing the included SQL transformation scripts.
+
 ## Example Outputs
 
 - [Interactive Tableau Dashboard](https://public.tableau.com/views/Czechia_dashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
