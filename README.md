@@ -10,7 +10,7 @@ A data analysis project focused on the Czech real estate market. This repository
 - **Data Storage:** Data is saved to a suitable database and prepared for further analysis.
 - **Visualization:** The processed data is visualized in Power BI or Tableau, with final outputs available as interactive dashboards or static reports.
 
-> **Disclaimer:**  
+> Disclaimer:
 > This project presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
 
 ## Technologies Used
@@ -28,14 +28,62 @@ A data analysis project focused on the Czech real estate market. This repository
 
 ## How to Use the Project
 
-1. **Data Scraping:**  
-   Run the provided Python scripts to collect up-to-date real estate data from selected sources.
+This section explains how to reproduce the full workflow, from data acquisition to final dashboards and reports.
 
-2. **Data Processing:**  
-   Import the data into a SQL database and apply the required transformations using the included SQL scripts. Further data processing and shaping can be done in Excel or Power Query as needed.
+### 1. Data Acquisition
 
-3. **Visualization:**  
-   Load the processed data into Power BI or Tableau and use the prepared visualizations, or create your own dashboards. Alternatively, export the results as PDF reports or share .pbix files.
+- **Scrape real estate listings:**
+  - Run the provided Python script to collect current real estate data from [Sreality.cz](https://www.sreality.cz).
+  - Example:
+    ```bash
+    python scripts/scrape_sreality.py
+    ```
+  - The output will be saved as a `.csv` file in the `data/` folder.
+
+- **Collect demographic and geographic data:**
+  - Download official datasets manually from:
+    - [Czech Statistical Office (ČSÚ)](https://www.czso.cz) – e.g., average wages, population by district.
+    - [Czech Office for Surveying, Mapping and Cadastre (ČÚZK)](https://www.cuzk.cz) – e.g., district boundaries and land registry data.
+  - Save the files into the `data/` folder and make sure filenames match the ones referenced in the SQL scripts or notebooks.
+
+### 2. Data Cleaning & Transformation
+
+- **Import data into PostgreSQL:**
+  - Create a new PostgreSQL database (e.g., `cz_real_estate`) using DBeaver or another client.
+  - Import raw CSV files into staging tables.
+  - Use the provided SQL scripts from the `sql/` folder to:
+    - Remove duplicates
+    - Normalize formats (e.g., prices, region names)
+    - Join datasets by region or district
+    - Calculate derived metrics (e.g., price per m²)
+
+- **Optional processing in Excel / Power Query:**
+  - Some files can be further cleaned using Excel or Power Query before import or after SQL processing.
+  - Useful for pivoting, shaping, or quick fixes (e.g., inconsistent column names).
+
+### 3. Data Visualization
+
+- **Power BI:**
+  - Open the provided `.pbix` file (`dashboards/powerbi_dashboard.pbix`) in Power BI Desktop.
+  - Refresh the data source to point to your local CSV files or PostgreSQL database.
+  - Explore or modify the existing dashboard pages.
+
+- **Tableau Public:**
+  - Open the Tableau workbook and connect it to your processed data.
+  - Alternatively, explore the hosted version:
+    [Interactive Tableau Dashboard](https://public.tableau.com/views/Czechia_dashboard/Dashboard1)
+
+- **Export options:**
+  - Export dashboard pages as static PDF reports.
+  - Share `.pbix` or Tableau workbooks.
+
+### 4. Project Outputs
+
+- Final CSV data tables are provided in [`csv_tables.zip`](csv_tables.zip)
+- Example dashboards:
+  - Power BI: [`powerbi_dashboard.pbix`](powerbi_dashboard.pbix)
+  - Tableau: [Hosted version](https://public.tableau.com/views/Czechia_dashboard/Dashboard1)
+- Example static report: [`powerbi_dashboard.pdf`](powerbi_dashboard.pdf)
 
 ## Requirements
 
