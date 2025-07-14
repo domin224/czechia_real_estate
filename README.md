@@ -12,6 +12,7 @@ A data analysis project focused on the Czech real estate market. This repository
 
 > **Note:**  
 > Final versions of the data tables were not only processed in SQL, but also in Microsoft Excel and/or using Power Query during import into Excel or Power BI. For this reason, the structure of the final tables (see `csv_tables.zip`) may differ from the original raw tables.
+> This project presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
 
 ## Technologies Used
 
@@ -45,7 +46,7 @@ A data analysis project focused on the Czech real estate market. This repository
 - [Final CSV data tables (ZIP)](csv_tables.zip)
 
 > **Disclaimer:**  
->This projects presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
+>This project presents average real estate prices and income data across the Czech Republic. Historical data comes from the ČÚZK database, which does not include 2024. Income data is from the ČSÚ. Data for 2025 was scraped from Sreality.cz on July 11 and reflects a snapshot, not a full-year average. The dashboard demonstrates the author’s skills in web scraping, data processing, and visualization; 2025 data is included to showcase technical abilities rather than provide a full market overview.
 
 ## Author
 
