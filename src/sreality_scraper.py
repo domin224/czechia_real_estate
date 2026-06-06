@@ -1,10 +1,21 @@
+"""Scraper for residential real estate listings from the Sreality.cz API.
+
+Collects apartments and houses for sale, parses size, disposition and a set of
+boolean attributes (new building, furnished, ...), de-duplicates against any
+previously saved data and writes the result to ``reality_houses.csv``.
+
+Run with ``python src/sreality_scraper.py --max-pages 100``.
+"""
+
+import argparse
 import os
-import requests
-import pandas as pd
-import time
 import re
-from tqdm import tqdm
+import time
 from datetime import date
+
+import pandas as pd
+import requests
+
 
 class RealityScraper:
 
@@ -210,7 +221,19 @@ class RealityScraper:
         self.save_to_csv(final_df, 'reality_houses.csv')
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--max-pages",
+        type=int,
+        default=100,
+        help="Maximum number of API pages to fetch (default: 100)",
+    )
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
+    args = parse_args()
     scraper = RealityScraper()
-    scraper.main(max_pages=100)
+    scraper.main(max_pages=args.max_pages)
 
