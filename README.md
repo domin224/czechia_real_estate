@@ -21,6 +21,8 @@ workflow: **data acquisition → cleaning & transformation → storage → visua
 
 ▶️ **Try the interactive Tableau version:** [Czechia Dashboard on Tableau Public](https://public.tableau.com/views/Czechia_dashboard/Dashboard1?:language=en-US&:origin=viz_share_link)
 
+🌐 **Live HTML dashboard (no login, opens in any browser):** [domin224.github.io/czechia_real_estate](https://domin224.github.io/czechia_real_estate/) — self-contained, built directly from the cleaned data in this repo.
+
 ---
 
 ## 📑 Table of Contents
@@ -86,7 +88,8 @@ czechia_real_estate/
 │   └── tableau_dashboard.pdf
 ├── data/
 │   └── csv_tables.zip         # Final cleaned data tables (CSV)
-├── docs/                      # Dashboard preview images
+├── docs/                      # GitHub Pages site + preview images
+│   └── index.html             # Self-contained interactive HTML dashboard
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -156,6 +159,7 @@ Then load the resulting CSVs into PostgreSQL and run `sql/project_script.sql`.
 ## 📦 Outputs
 
 - **Interactive dashboards**
+  - [Live HTML dashboard (GitHub Pages)](https://domin224.github.io/czechia_real_estate/) — self-contained, built from this repo's data
   - [Tableau Public (hosted)](https://public.tableau.com/views/Czechia_dashboard/Dashboard1?:language=en-US&:origin=viz_share_link)
   - Power BI workbook: [`dashboards/powerbi_dashboard.pbix`](dashboards/powerbi_dashboard.pbix)
   - Tableau workbook: [`dashboards/tableau_dashboard.twb`](dashboards/tableau_dashboard.twb)
