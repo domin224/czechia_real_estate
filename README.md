@@ -23,6 +23,8 @@ workflow: **data acquisition → cleaning & transformation → storage → visua
 
 🌐 **Live HTML dashboard (no login, opens in any browser):** [domin224.github.io/czechia_real_estate](https://domin224.github.io/czechia_real_estate/) — self-contained, built directly from the cleaned data in this repo.
 
+> ℹ️ **AI-assisted build:** the interactive web dashboard was created with the help of AI (Claude), which reworked my Power BI / Tableau dashboards into a single self-contained, interactive web page (Leaflet map + Chart.js), driven directly by the project's cleaned data.
+
 ---
 
 ## 📑 Table of Contents
